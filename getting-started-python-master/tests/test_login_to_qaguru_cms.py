@@ -3,7 +3,7 @@ from selene import browser, have
 
 def test_valid_login():
     browser.config.hold_driver_at_exit = True
-    browser.open('https://qa.guru/cms/system/login?required=true')
+    browser.open('https://qa.guru/cms/system/login')
     browser.element('.login-form [name =email]').type('qagurubot@gmail.com').press_tab()
     browser.element('[name =email]').type('qagurupassword').press_enter()
     browser.element('.login-form.btn-success').click()
